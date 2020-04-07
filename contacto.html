@@ -45,7 +45,7 @@
         <div class="collapse navbar-collapse" id="menu-principal">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a href="index.html" class="nav-link">Inicio</a></li>
-            <li class="nav-item"><a href="mas-servicios.html" class="nav-link">Sesiones</a></li>
+            <li class="nav-item"><a href="mas-servicios.html" class="nav-link">Sesiones creativas</a></li>
           </ul>
         </div>
       </div>
@@ -72,10 +72,10 @@
           </div>
           <div class="w-100"></div>
           <div class="col-md-4">
-            <p><span></span> <a href="mailto:hola@bilby.mx">hola@bilby.mx</a></p>
+            <p><span></span> <a href="mailto:bilbyinnovation@gmail.com">Clic aquí para email</a></p>
           </div>
           <div class="col-md-4">
-            <p><span></span> <a href="#">www.bilby.mx</a></p>
+            <p><span></span> <a href="https://danielsan2020.github.io/UXbilby/">Web bilby</a></p>
           </div>
           <div class="col-md-4">
             <div class="ftco-footer-widget px-5">
@@ -89,21 +89,35 @@
         </div>
         <div class="row block-9">
           <div class="col-md-6 pr-md-3">
-            <form action=“https://formspree.io/xlebndyj” method=“POST”>
+            <form class="contact__form" method="post" action="mail.php">
+
+                    <!-- form message -->
+                    <div class="row">
+                      <div class="col-12">
+                          <div class="contact__msg" style="display: none">
+                              <p>Your message was sent successfully.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- end message -->
+
               <div class="form-group">
-                <input type="text" name="nombre" class="form-control" placeholder="Tu nombre">
+                <input name="name" type="text" class="form-control" placeholder="Nombre" required>
               </div>
               <div class="form-group">
-                <input type="text" name="mail" class="form-control" placeholder="Tu mail">
+                <input name="email" type="email" class="form-control" placeholder="Email" required>
               </div>
               <div class="form-group">
-                <input type="text" name="asunto" class="form-control" placeholder="Asunto">
+                <input name="subject" type="text" class="form-control" placeholder="Asunto" required>
               </div>
               <div class="form-group">
-                <textarea name="message" cols="30" rows="7" class="form-control" placeholder="Tu mensaje"></textarea>
+                <textarea name="message" class="form-control" rows="10" placeholder="Mensaje" required></textarea>
+              </div>
+                  <div class="col-12 form-group">
+                  <div class="g-recaptcha" data-sitekey="___enter_site_key___"></div>
               </div>
               <div class="form-group">
-                <input type="submit" value="Enviar mensaje" class="btn btn-primary text-dark py-3 pb-1">
+                <input type="submit" name="submit" value="Enviar mensaje" class="btn btn-primary text-dark py-3 pb-1">
               </div>
             </form>
           </div>
@@ -136,7 +150,7 @@
              <div class="ftco-footer-widget mb-2">
               <h2 class="ftco-heading-2">Información de contacto</h2>
               <ul class="list-unstyled">
-                <li><a href="mailto:hola@bilby.mx" class="py-0 d-block font-weight-bold">hola@bilby.mx</a></li>
+                <li><a href="mailto:bilbyinnovation@gmail.com" class="py-0 d-block font-weight-bold">Clic aquí para email</a></li>
               </ul>
             </div>
           </div>
@@ -180,6 +194,8 @@
   <script src="js/particle.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/jquery-3.4.1.min.js"></script>    
+  <script src="js/jquery-3.4.1.min.js"></script>  
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>  
   </body>
 </html>
