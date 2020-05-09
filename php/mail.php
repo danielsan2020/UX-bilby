@@ -32,7 +32,7 @@
         $responseKeys = json_decode($response,true);
 
         if(intval($responseKeys["success"]) !== 1) {
-          echo '<p class="alert alert-warning">Please check the the captcha form.</p>';
+          echo '<p class="alert alert-warning">Por favor presionar el captcha.</p>';
         } else {
             # Mail Content
             $content = "Name: $name\n";
@@ -61,4 +61,5 @@
         echo '<p class="alert alert-warning">Hay un problema con el envío, inténtalo de nuevo por favor.</p>';
     }
 
+    // var_dump($success)
 ?>
